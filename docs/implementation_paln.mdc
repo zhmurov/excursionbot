@@ -1,0 +1,92 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: "Implementation plan for Telegram Location Facts Bot"
+alwaysApply: false
+---
+
+# Implementation Plan
+
+> **Status Guide**: Each task has a status prefix:
+> - `TODO:` - Not started
+> - `IN_PROGRESS:` - Currently working on
+> - `DONE:` - Completed
+> 
+> Always start work from the first uncompleted task.
+
+## Milestone 1: Project Setup & Basic Structure
+
+- TODO: Create project directory structure (`/src`, `/src/handlers`, `/src/services`, `/src/utils`, `/tests`, `/docs`)
+- TODO: Initialize Git repository and create `.gitignore` file
+- TODO: Create `requirements.txt` with initial dependencies (python-telegram-bot==21.0, openai==1.12.0, python-dotenv==1.0.0, aiohttp==3.9.0)
+- TODO: Create `pyproject.toml` with Ruff configuration
+- TODO: Create `.env.example` with template variables (TELEGRAM_BOT_TOKEN, OPENAI_API_KEY)
+- TODO: Create `config.py` for environment variable management
+- TODO: Create basic `README.md` with project description and setup instructions
+- TODO: Create `railway.json` for deployment configuration
+- TODO: Set up GitHub repository and push initial commit
+
+## Milestone 2: Core Bot Implementation
+
+- TODO: Create `main.py` with async application entry point
+- TODO: Create `bot.py` with Telegram bot initialization and basic configuration
+- TODO: Create `/src/handlers/location_handler.py` with location message handler
+- TODO: Create `/src/services/openai_service.py` with GPT-4 integration
+- TODO: Create `/src/utils/prompts.py` with prompt templates for fact generation
+- TODO: Implement error handling in `/src/utils/errors.py`
+- TODO: Create `/src/handlers/start_handler.py` for /start command
+- TODO: Add logging configuration in `/src/utils/logger.py`
+- TODO: Test bot locally with static location sending
+
+## Milestone 3: OpenAI Integration & Deployment
+
+- TODO: Implement location-to-fact prompt generation in `openai_service.py`
+- TODO: Add retry logic for OpenAI API calls
+- TODO: Create comprehensive error messages for users
+- TODO: Add rate limiting to prevent API abuse
+- TODO: Write basic tests in `/tests/test_handlers.py`
+- TODO: Create deployment documentation in `/docs/deployment.md`
+- TODO: Deploy to Railway and configure environment variables
+- TODO: Test deployed bot with real locations
+- TODO: Add monitoring/health check endpoint
+
+## Milestone 4: Live Location Support (v1.1)
+
+- TODO: Create `/src/handlers/live_location_handler.py` for live location updates
+- TODO: Implement timer mechanism in `/src/utils/timer.py` for 10-minute intervals
+- TODO: Create user session management in `/src/services/session_service.py`
+- TODO: Add logic to stop fact generation when live location stops
+- TODO: Implement fact deduplication to avoid repeating facts
+- TODO: Update error handling for live location scenarios
+- TODO: Test live location feature extensively
+- TODO: Update documentation for v1.1 features
+
+## Acceptance Checklist
+
+### MVP (v1.0)
+- [ ] Bot responds to `/start` command with instructions
+- [ ] Bot accepts static location and returns a fact within 10 seconds
+- [ ] Bot handles errors gracefully (invalid location, API errors)
+- [ ] Bot is deployed and accessible via @username_bot
+- [ ] Environment variables are properly configured on Railway
+- [ ] Bot handles rate limiting appropriately
+- [ ] Documentation includes setup and deployment instructions
+
+### v1.1 Features
+- [ ] Bot accepts live location sharing
+- [ ] New facts are generated every 10 minutes during live location
+- [ ] Bot stops generating facts when live location is disabled
+- [ ] Facts don't repeat for the same session
+- [ ] Performance is acceptable (response time < 5 seconds)
+
+### Code Quality
+- [ ] All code passes Ruff linting
+- [ ] Functions have appropriate type hints
+- [ ] Error handling is comprehensive
+- [ ] Logging provides useful debugging information
+- [ ] Sensitive data is never logged
+
+> **@Cursor**: После завершения задачи поменяй её статус на DONE и добавь краткий маркер «// done by Cursor» с описанием, что именно сделано.

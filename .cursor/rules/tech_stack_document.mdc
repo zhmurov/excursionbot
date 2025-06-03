@@ -1,0 +1,24 @@
+# Tech Stack Document
+
+## Technology Stack
+
+| Layer | Library/Service | Version | Purpose | Documentation |
+|-------|----------------|---------|---------|---------------|
+| **Runtime** | Python | 3.11+ | Modern Python runtime with async support | [docs.python.org](https://docs.python.org/3/) |
+| **Bot SDK** | python-telegram-bot | 21.0+ | Official Telegram Bot API wrapper with async support | [python-telegram-bot.org](https://docs.python-telegram-bot.org/) |
+| **OpenAI SDK** | openai | 1.12+ | Official OpenAI API client for GPT-4 integration | [platform.openai.com/docs](https://platform.openai.com/docs/libraries/python-library) |
+| **Database** | - | - | Not required for MVP | - |
+| **Deployment** | Railway | - | Simple deployment platform with GitHub integration | [docs.railway.app](https://docs.railway.app/) |
+| **Linter/Formatter** | Ruff | 0.1.0+ | Fast Python linter and formatter (replaces Black + Flake8) | [docs.astral.sh/ruff](https://docs.astral.sh/ruff/) |
+
+## Additional Dependencies
+
+| Dependency | Version | Purpose | Documentation |
+|------------|---------|---------|---------------|
+| **python-dotenv** | 1.0.0+ | Environment variables management | [pypi.org/project/python-dotenv](https://pypi.org/project/python-dotenv/) |
+| **aiohttp** | 3.9+ | Async HTTP client (for potential future features) | [docs.aiohttp.org](https://docs.aiohttp.org/) |
+
+## Notes
+- Using async/await pattern throughout the application for better performance
+- No database needed for MVP - all interactions are stateless
+- Railway automatically detects Python projects and uses `requirements.txt`

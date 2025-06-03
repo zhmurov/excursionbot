@@ -1,0 +1,47 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: "Target file structure"
+alwaysApply: true
+---
+
+# File Structure Document
+
+## Directory Structure
+
+| Directory | Purpose |
+|-----------|---------|
+| `/` | Root directory with configuration files |
+| `/src` | Main application source code |
+| `/src/handlers` | Telegram bot command and message handlers |
+| `/src/services` | External service integrations (OpenAI, etc.) |
+| `/src/utils` | Helper functions and utilities |
+| `/tests` | Unit and integration tests |
+| `/docs` | Project documentation |
+
+## Main Files
+
+| File | Purpose |
+|------|---------|
+| `main.py` | Application entry point and bot initialization |
+| `bot.py` | Telegram bot setup and configuration |
+| `config.py` | Configuration management and environment variables |
+| `requirements.txt` | Python dependencies list |
+| `.env.example` | Example environment variables file |
+| `railway.json` | Railway deployment configuration |
+| `README.md` | Project documentation and setup instructions |
+| `.gitignore` | Git ignore patterns |
+| `pyproject.toml` | Python project configuration and Ruff settings |
+
+## Generate New Files Here
+
+When adding new functionality, place files in these directories:
+
+- `/src/handlers/` - New bot command handlers
+- `/src/services/` - New external service integrations
+- `/src/utils/` - New utility functions
+- `/tests/` - New test files
+- `/docs/` - New documentation
